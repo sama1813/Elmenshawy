@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="eng" dir="rtl">
+ <head>
+     <link rel="stylesheet " href="Style2.css">
+     <title>مستشفى المنشاوى العام</title>
+    
+<body>
+    
+ <h2> قسم الأشعة</h2>
+      
+         <img src="C:\Users\mf\Desktop\اشعة 2.jpg"  > <br>
+      
+
+        <br>        
+        <input type="search" value="" id ="myinput"  placeholder="ابحث من هنا" onkeyup="myFun()" >        
+        
+       <br><br>
+        <table id="my table">
+            <tr>
+                <th> اسم الأشعة</th>
+                <th> سعر الأشعة</th>
+
+            </tr>
+            <tbody>
+                <tr>
+                    <td>اشعةعاديةالعظام(DR)</td>
+                    <td>25</td>
+                </tr>
+                <tr>
+                    <td> اشعة عادية الصدر(DR)</td>
+                    <td>25</td>
+                </tr>
+                <tr>
+                    <td> اشعة عاديةالمسالك(DR)</td>
+                    <td>25</td>
+                </tr>
+                               
+                <tr>
+                    <td> اشعة عاديةالفقرات العنقية(DR)</td>
+                    <td>35</td>
+                </tr>                <tr>
+                    <td> اشعة عادية القطنية(DR)</td>
+                    <td>40</td>
+                </tr>
+                <tr>
+                    <td> اشعة مقطعية متوفر جميع الفحوصات ماعدا (البطن و الفقرات و الحوض)(Computed Tomography)</td>
+                    <td>150</td>
+                </tr>
+                <tr>
+                    <td> اشعة مقطعية على الفقرات بدون صبغة (Computed Tomography)</td>
+                    <td>175</td>
+                </tr>
+                <tr>
+                    <td> اشعة مقطعية على البطن بدون صبغة(Computed Tomography)</td>
+                    <td>175</td>
+                </tr>
+                <tr>
+                    <td> اشعة مقطعية على الحوض بدون صبغة(Computed Tomography) </td>
+                    <td>175</td>
+                </tr>
+                <tr>
+                    
+                    
+                    <td>  اشعة رنين مغناطيسى على انحاء الجسم (Magentic Resonsnce Imagning)</td>
+                    <td>350</td>
+                </tr>
+            </tbody>
+        </table><br>
+        <button id="button"> <a href="project.html"  > خروج </a>  </button><br>
+        
+        
+        
+        <p><b>" شكرا على زيارة موقعنا و للاستفسار يرجى التواصل على صفحة المنشاوى الرسمية على فيسبوك"</p>
+       <script>
+        function myfun (){
+            let valuesearch=document.getElementById("myinput").value .toUpperCase();
+            let table =document.getElementById("my table");
+            let tr = document.getElementsByTagName("tr") ;
+            for (let i=0 ; i<tr.length ; i++)
+            {
+                let td = tr[i] .getElementsByTagName("td")[0];
+                if(td){
+                    let text = td.innerHTML;
+                    if(text.toUpperCase().indexOf (valuesearch) > -1)
+                    {
+                        tr[i].style.display=""
+                    }
+                    else{
+                        tr[i].style.display="none"
+                    }
+                }
+               
+            }
+
+            console.log(valuesearch);
+
+        }
+        
+       </script> 
+                
+       
+
+         
+         
+            
+
+        
+</body>
+ </head>
+</html>
